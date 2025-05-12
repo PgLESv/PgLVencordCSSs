@@ -1,0 +1,382 @@
+/* --------------------- viggy loader --------------------- */
+/*https://discord.com/channels/1015060230222131221/1028106818368589824/1223837351831277590*/
+.container__827e6 video.ready__61f2f {
+    display: none;
+}
+
+.content_de05de::before {
+    visibility: visible;
+    content: '';
+    display: block;
+    background: url(https://media.discordapp.net/stickers/1217112512374505613.png?size=240);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 128px;
+    margin: auto;
+    margin-bottom: 48px;
+}
+
+/* --------------------- Oneko Sleeping --------------------- */
+/*https://discord.com/channels/1015060230222131221/1028106818368589824/1044717748778971157*/
+[class^="channelTextArea"]::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    bottom: calc(100% - 3px); /* Mess with the - 3px to change its vertical position */
+    right: 10px; /* Switch this from right to left to put it on the left side, or increase/decrease to change its position */
+    position: absolute;
+    image-rendering: pixelated;
+    pointer-events: none;
+    background-image: url("https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.gif");
+    animation: oneko 1s infinite; /* change 1s to make the animation slower/faster */
+}
+
+@keyframes oneko {
+    /*
+    if you open the background image in ur browser, you will see that it has way more frames
+    so if you want, you could make ur own keyframes for a different animation
+    the top left frame is 0 0, second top row is -32 0, second row second is -32 -32 and so on
+    the ...00001% makes it so that there's no transition between the frames, so if you wanted say 3 frames, you'd do 0%, 33.3%; 33.30001%, 66.6%; 66.60001%, 100%
+    */
+    0%, 50% {
+        background-position: -64px 0;
+    }
+    50.0001%, 100% {
+        background-position: -64px -32px;
+    }
+}
+
+/* --------------------- Shiggy popup --------------------- */
+/*https://discord.com/channels/1015060230222131221/1028106818368589824/1222852910011125810*/
+[id*="popout_"]::after, [class*=menu]::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://media.discordapp.net/stickers/1039992459209490513.png');
+    background-size: cover;
+}
+/* Alternate Shiggy Link: https://media.discordapp.net/stickers/1217112512374505613.png */
+
+/* --------------------- Detailed Timestamp --------------------- */
+/*https://discord.com/channels/1015060230222131221/1028106818368589824/1354458308714696816*/
+/* Detailed Timestamp */
+span[class*="timestampInline_"] time::before {
+  content: attr(aria-label);
+  font-size: 12px;
+}
+
+/* Detailed Timestamp */
+span[class*="timestampInline_"] {
+  font-size: 0px !important;
+}
+
+/* --------------------- align chat box with user panel fancy --------------------- */
+/* https://discord.com/channels/1015060230222131221/1028106818368589824/1354621684115837098 */
+.visual-refresh {
+    --custom-channel-textarea-text-area-height: 56px;
+    .form_f75fb0 {
+        margin: 0 8px 8px 8px;
+        padding: 0;
+        --chatbar-border-color: var(--border-faint);
+    }
+    .channelTextArea_f75fb0 {
+        margin: 0;
+        border-color: var(--chatbar-border-color);
+        transition: none;
+    }
+    .base_b88801 {
+        top: -24px;
+        left: 0;
+        right: 0;
+        background-color: var(--chat-background-default);
+        padding: 0 8px;
+        border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+        border: 1px solid var(--chatbar-border-color);
+        border-bottom: none;
+        transition: none;
+        box-sizing: border-box;
+    }
+    .stackedBars__74017,
+    .threadSuggestionBar__841c8 {
+        border-color: var(--chatbar-border-color) !important;
+    }
+    /*Deixa o chat alinhado com a aprte de baixo*/
+    .channelBottomBarArea_f75fb0 {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .chat_f75fb0 {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+    }
+    .form_f75fb0{
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    /*Fim desse ajuste*/
+    .form_f75fb0:has(.base_b88801) {
+        .channelTextArea_f75fb0 {
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+        }
+    }
+    .form_f75fb0:has(.channelTextArea__74017:focus-within) {
+        --chatbar-border-color: var(--border-subtle);
+    }
+    .scrollerSpacer__36d07 {
+        height: calc(24px + 8px);
+    }
+    .scroller__36d07::-webkit-scrollbar-track {
+        margin-bottom: calc(20px + 8px);
+    }
+    .bottomBar__0f481 {
+        margin-bottom: 24px;
+    }
+    .wrapper__44df5 {
+        margin: 0;
+        border-radius: var(--radius-sm);
+    }
+}
+
+/* --------------------- titlebar header --------------------- */
+/*https://discord.com/channels/1015060230222131221/1028106818368589824/1363870789845258251*/
+.title_c38106 {
+  display: none;
+}
+
+.title_f75fb0 {
+  padding: 0px !important;
+  /* scale: 0.9; */
+  padding-left: 2px !important;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: transparent !important;
+  height: var(--custom-app-top-bar-height) !important;
+  min-height: 0px;
+  border: none !important;
+  width: calc(100vw);
+}
+
+.followButton_f75fb0,
+.topicClickTarget__6ec1a {
+  -webkit-app-region: no-drag !important;
+}
+
+.base_c48ade:has(.bar_c38106[data-windows="true"]) .title_f75fb0 {
+  width: calc(100vw - 240px)!important;
+}
+
+.children__9293f::after {
+  background: linear-gradient(to right, transparent 0, var(--bg-base-tertiary) 100%)!important;
+}
+.topic__6ec1a {
+  flex: none;
+}
+
+/* --------------------- Revert user area --------------------- */
+/*https://discord.com/channels/1015060230222131221/1028106818368589824/1361443579905445898*/
+.visual-refresh div[class^="sidebar_"] section[class^="panels_"] {
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);
+    left: var(--custom-guild-list-width);
+    bottom: 0px;
+    border-radius: 0px;
+    border: none;
+}
+
+.visual-refresh nav[class*=guilds_] {
+  margin-bottom: unset;
+}
+
+/* --------------------- Server Sidebar --------------------- */
+/*https://discord.com/channels/1015060230222131221/1028106818368589824/1354502862390038528*/
+/*@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");*/
+
+:root {
+    --guildbar-avatar-size: 48px;
+    --blob-scale: 48;
+    --guildbar-folder-size: var(--guildbar-avatar-size);
+    --folder-blob-scale: var(--blob-scale);
+    --custom-folder-preview-gap: 1px;
+    --custom-guild-list-padding: 10px;
+    --custom-guild-list-width: calc(
+        max(var(--guildbar-avatar-size), var(--guildbar-folder-size))
+        + var(--custom-guild-list-padding) * 2
+    );
+}
+
+nav[class*="guilds_"] {
+    /* Uncomment if you changed up your nameplate */
+    /* margin: 0;
+    [class*="sidebar_"]::after {
+        height: 0;
+    } */
+    defs>path {
+        /* #svg-mask-squircle */
+        d: path("M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z");
+    }
+    defs, 
+    [class*="blobContainer_"],
+    [class*="wrapper_"],
+    [class*="listItemWrapper__"],
+    svg[class*="placeholderMask__"],
+    svg:not([class*="placeholderMask__"]) > foreignObject {
+        width: var(--guildbar-avatar-size) !important;
+        height: var(--guildbar-avatar-size) !important;
+    }
+    [class*="childWrapper__"]>svg {
+        width: var(--guildbar-avatar-size);
+        height: var(--guildbar-avatar-size);
+    }
+    [class*="childWrapper__"],
+    [class*="childWrapper__"] img,
+    [class*="icon_"],
+    [class*="circleIconButton__"] {
+        border-radius: 50% !important;
+        transition: border-radius 50ms linear;
+    }
+    [class*="selected__"] {
+        [class*="childWrapper__"],
+        [class*="childWrapper__"] img,
+        [class*="icon_"],
+        &[class*="circleIconButton__"] {
+            border-radius: 27% !important;
+        }
+    }
+    [class*="shiftSVG_"] {
+        top: 0px;
+        left: 0px;
+
+        foreignObject {
+            transform: translate(-4px, -4px);
+        }
+    }
+    mask {
+        --badge-offset: calc(var(--guildbar-avatar-size) - 40px);
+
+        &:not([class*="folderHeader__"] mask) {
+            use[href$="-lower_badge_masks"] {
+                translate: var(--badge-offset) var(--badge-offset);
+            }
+
+            use[href$="-upper_badge_masks"] {
+                translate: var(--badge-offset);
+            }
+        }
+
+        use[href$="-blob_mask"] {
+            scale: var(--blob-scale);
+        }
+    }
+    [class*="folderPreviewWrapper__"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        [class*="folderPreview__"] {
+            width: calc(var(--guildbar-folder-size) / 3 * 2 + var(--custom-folder-preview-gap) * 2);
+            height: calc(var(--guildbar-folder-size) / 3 * 2 + var(--custom-folder-preview-gap) * 2);
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            gap: 4px;
+        }
+    }
+    [class*="iconSizeMini_"] {
+        width: calc(var(--guildbar-folder-size) / 3);
+        height: calc(var(--guildbar-folder-size) / 3);
+
+        transform: scale(1.15);
+        margin: 0px;
+
+        [class*="acronym_"] {
+            line-height: calc(var(--guildbar-folder-size) / 3);
+        }
+
+        &[style*="font-size: 12px;"] {
+            font-size: 10px !important;
+        }
+        &[style*="font-size: 10px;"] {
+            font-size: 7px !important;
+        }
+        &[style*="font-size: 8px;"] {
+            font-size: 6px !important;
+        }
+    [class*="folderButton__"] {
+        overflow: visible;
+    }
+    }
+    [class*="folderIcon__"] {
+        svg {
+            width: 28px !important;
+            height: 28px !important;
+        }
+        background-color: var(--bg-mod-subtle);
+    }
+    [class*="closedFolderIconWrapper__"] {
+        gap: initial;
+    }
+    [class*="listItem__"] {
+        margin-bottom: 7px;
+        height: min-content;
+    }
+    [class*="stack_"] {
+        gap: 0 !important;
+    }
+    #guild-list-unread-dms {
+        margin-top: 0 !important;
+        > div {
+            height: var(--guildbar-avatar-size) !important;
+            margin-bottom: 7px;
+        }
+    }
+    [class*="isExpanded__"] {
+        [class*="folderGroupBackground__"] {
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+        }
+
+        [class*="stack_"] {
+            height: auto !important;
+            :last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        > [class*="listItem__"] {
+            margin-bottom: 0;
+        }
+
+        margin-bottom: 7px;
+    }
+    [id^="folder-items-"] {
+        --guildbar-avatar-size: var(--guildbar-folder-size) !important;
+    }
+}
+nav[class*="guilds_"] [class*="listItem__"]:first-child [class*="childWrapper__"] > svg {
+    width: 28px !important;
+    height: 28px !important;
+}
+
+/* --------------------- reduce context menu padding --------------------- */
+/*https://discord.com/channels/1015060230222131221/1028106818368589824/1371211975794888794*/
+.scroller_c1e9c4{
+    margin: -4px;
+    &::after,.separator_c1e9c4 {
+        margin: 1px 8px !important;
+    }
+    &::after,.wrapper_f563df {
+        padding: 2px !important;
+    }
+    &::after,.item_c1e9c4{
+        /* min-height is 32px as default, change value for desired look */
+        min-height: 32;
+        /* padding is 4px 8px as default, change value for desired look */
+        padding: 4px 8px;
+    }
+}
