@@ -84,7 +84,7 @@ span[class*="timestampInline_"] {
 .title_f75fb0 {
   padding: 0px !important;
   /* scale: 0.9; */
-  padding-left: 2px !important;
+  padding-left: 10px !important;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -328,6 +328,16 @@ nav[class*="guilds_"] [class*="listItem__"]:first-child [class*="childWrapper__"
   }
 }
 
+/*
+Fontes usadas abaixo, está fora de ordem e pode estar faltando algo ou ter algo a mais
+https://github.com/Patchuuri/VencordCSS/blob/main/custom.css
+https://github.com/sapphonie/discordCSS/blob/master/sappho.css
+https://github.com/ne-ku/discord-css-tweaks/blob/main/stylesheet.css
+https://github.com/milbits/oldcord/tree/main/src/components
+https://github.com/bron99/Discord_2024/tree/master/src/components
+https://github.com/HenesseyDriftCar/Discord-Custom-CSS/tree/main/CSS
+*/
+
 /* --------------------- CHANNELS/DMS --------------------- */
 
   .sidebarList_c48ade {
@@ -536,4 +546,74 @@ a:has(div[aria-label="Help"]) {
         translate: 0px -1px;
         scale: 0.75;
     }
+}
+
+/* Disable Popup ads */
+.containerWrapper_fa6aa6,                   /* "Like this avatar decoration" popup on user modal */
+container__9dbd2                            /* Profile effect ad */ {
+    display: none;
+}
+
+/* Hide Nitro gift button in DMs */
+button[aria-label="Send a gift"] {
+    display: none;
+}
+
+/* Hide Nitro gift button */
+button[aria-label="Send a gift or Boost this server"] {
+    display: none;
+}
+
+/* Hide shop button in Home */
+a[data-list-item-id*="shop"] { display: none; }
+
+/* Hide Nitro button in Home */
+a[data-list-item-id$="___nitro"] { display: none; }
+/* *[href="/discovery"],  */
+/* *[href="/store"],  */
+/* *[href="/activities"], */
+/* *[href*="/snowsgiving"], */
+/* div[aria-label="Gift Inventory"],  */
+/* div[aria-label="Nitro"],  */
+button[aria-label="Apps"], 
+button[aria-label="Send a gift"] {
+    display: none;
+}
+
+/* ANIMATED CHANNEL HOVER // BY REFACT0R IN VENCORD SERVER */
+
+:root {
+    --list-item-transition: 0.2s ease;
+}
+.wrapper__2ea32 .link__2ea32 {
+    transition: margin-left var(--list-item-transition);
+}
+.wrapper__2ea32:hover .link__2ea32 {
+    margin-left: 10px;
+}
+.unread__2ea32 {
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+    transition: var(--list-item-transition);
+}
+
+/* BETTER TYPING AREA */
+.typing_b88801 {
+  top: calc(0px - var(--space-24));
+  left: 0 !important;
+  padding-left: var(--space-16);
+  background: none;
+}
+
+.visual-refresh .channelTextArea__74017 {
+  border: 2px solid var(--gradient-color1);
+  background: var(--card-shading);
+  margin-bottom: var(--space-xs);
+  border-radius: 30px;
+}
+
+.visual-refresh .channelTextArea__74017:focus-within {
+  border: 2px solid var(--gradient-color2);
 }
